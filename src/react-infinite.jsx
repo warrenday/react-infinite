@@ -332,7 +332,8 @@ var Infinite = createReactClass({
     if (this.utils.scrollShouldBeIgnored(e)) {
       return;
     }
-    this.computedProps.handleScroll(this.scrollable);
+
+    this.computedProps.handleScroll(this.scrollable, this.state.displayIndexStart, this.state.displayIndexEnd + 1);
     this.handleScroll(this.utils.getScrollTop());
   },
 
